@@ -147,7 +147,7 @@ skills/arabic-bidi/
 ├── references/
 │   ├── artifacts.md                 الصفحات والرسوم البيانية
 │   ├── other-formats.md             ملفات المكتب والصور والفيديو والإيميل
-│   └── persian-urdu-hebrew.md       الفارسية والأردية والعبرية
+│   └── persian-urdu.md       الفارسية والأردية
 └── scripts/check_bidi.py            أداة الفحص
 hooks/                               الفحص التلقائي
 examples/demo.html                   صفحة قبل وبعد
@@ -180,7 +180,7 @@ preferences-snippet.md               النسخة المختصرة للتفضي�
 - **Chat replies:** every Arabic line starts with an Arabic word; symbols that flip (`C++`, `C#`, `.NET`, `10-20`, `+966 50…`, `-15%`, `$49`) are rephrased or wrapped in an invisible LRM mark. Every rule was verified in Chromium with `dir="auto"`, the way chat apps render.
 - **Artifacts:** `dir="rtl"`, `<bdi>` isolation, `dir="auto"` for dynamic text, logical CSS, one font for both scripts, canvas and chart RTL options.
 - **Other formats:** Word, PowerPoint, Excel, PDF, Pillow images, ffmpeg/ASS captions, HTML email, Mermaid.
-- **Languages:** Arabic, Persian (ZWNJ, Persian letters and digits), Urdu (Nastaliq), Hebrew.
+- **Languages:** Arabic, Persian (ZWNJ, Persian letters and digits), Urdu (Nastaliq).
 - **Automatic check in Claude Code:** a hook runs the checker on every file Claude writes and sends problems back so Claude fixes them.
 
 **Install**
