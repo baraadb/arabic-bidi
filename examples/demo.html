@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>قبل وبعد</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f7f5f0; --card: #ffffff; --ink: #1d1b16; --muted: #6b665c;
+    --bad: #b3261e; --bad-bg: #fdecea; --good: #1e6b3a; --good-bg: #e8f5ec; --line: #e4dfd4;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #17161a; --card: #222126; --ink: #ece9e2; --muted: #a29d93;
+      --bad: #ff8a80; --bad-bg: #3a1f1d; --good: #81d4a0; --good-bg: #1c3125; --line: #34323a;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #17161a; --card: #222126; --ink: #ece9e2; --muted: #a29d93;
+    --bad: #ff8a80; --bad-bg: #3a1f1d; --good: #81d4a0; --good-bg: #1c3125; --line: #34323a;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font-family: "IBM Plex Sans Arabic", "Noto Sans Arabic", "DejaVu Sans", system-ui, sans-serif;
+    line-height: 1.75; font-size: 17px;
+  }
+  main { max-width: 920px; margin-inline: auto; padding: 32px 16px 64px; }
+  h1 { font-size: 1.7rem; margin: 0 0 4px; }
+  .lede { color: var(--muted); margin: 0 0 28px; }
+  h2 { font-size: 1.15rem; margin: 36px 0 12px; }
+  .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  @media (max-width: 640px) { .pair { grid-template-columns: 1fr; } }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px; }
+  .tag { display: inline-block; font-size: .8rem; font-weight: 600; padding: 1px 10px; border-radius: 999px; margin-block-end: 8px; }
+  .bad .tag { background: var(--bad-bg); color: var(--bad); }
+  .good .tag { background: var(--good-bg); color: var(--good); }
+  /* each "chat paragraph" is rendered the way chat apps do: dir=auto per block */
+  .chat p, .chat li { margin: 0 0 6px; }
+  .chat ul { margin: 0; padding-inline-start: 20px; }
+  code { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: .88em; background: var(--bg); padding: 1px 5px; border-radius: 5px; }
+  pre { direction: ltr; text-align: left; background: var(--bg); padding: 10px 12px; border-radius: 8px; overflow-x: auto; margin: 6px 0 0; }
+  .note { color: var(--muted); font-size: .9rem; margin-block-start: 8px; }
+  bdi { white-space: nowrap; }
+</style>
+</head>
+<body>
+<main>
+  <h1>العربي والإنجليزي في نفس السطر</h1>
+  <p class="lede">كل سطر في العمود الأيمن والأيسر هو نفس المعلومة. الفرق فقط في طريقة الكتابة أو الوسوم.</p>
+
+  <h2>١. ردود المحادثة: أول كلمة تحدد اتجاه السطر</h2>
+  <div class="pair">
+    <div class="card bad chat"><span class="tag">قبل</span>
+      <p dir="auto">Claude يقدر يقرأ الملفات ويحللها.</p>
+      <p dir="auto"><code>npm install</code> يثبت كل الحزم المطلوبة.</p>
+      <ul><li dir="auto"><b>Python</b>: لغة سهلة للمبتدئين.</li>
+          <li dir="auto">React مقابل Vue: أيهم أفضل؟</li></ul>
+    </div>
+    <div class="card good chat"><span class="tag">بعد</span>
+      <p dir="auto">يقدر Claude يقرأ الملفات ويحللها.</p>
+      <p dir="auto">الأمر <code>npm install</code> يثبت كل الحزم المطلوبة.</p>
+      <ul><li dir="auto"><b>لغة Python</b>: سهلة للمبتدئين.</li>
+          <li dir="auto">مقارنة بين React و Vue: أيهم أفضل؟</li></ul>
+    </div>
+  </div>
+
+  <h2>٢. ردود المحادثة: الرموز والأرقام</h2>
+  <div class="pair">
+    <div class="card bad chat"><span class="tag">قبل</span>
+      <p dir="auto">استخدم C++ أو C# للمشروع.</p>
+      <p dir="auto">يخلص خلال 10-20 دقيقة.</p>
+      <p dir="auto">اتصل على +966 50 123 4567 الحين.</p>
+    </div>
+    <div class="card good chat"><span class="tag">بعد</span>
+      <p dir="auto">استخدم &lrm;C++&lrm; أو &lrm;C#&lrm; للمشروع.</p>
+      <p dir="auto">يخلص خلال 10 إلى 20 دقيقة.</p>
+      <p dir="auto">اتصل على &lrm;+966 50 123 4567&lrm; الحين.</p>
+    </div>
+  </div>
+  <p class="note">علامة &lrm;LRM&lrm; حرف غير مرئي يثبّت اتجاه الكلمة الإنجليزية أو الرقم.</p>
+
+  <h2>٣. صفحات HTML: عزل النص الإنجليزي</h2>
+  <div class="pair">
+    <div class="card bad"><span class="tag">قبل</span>
+      <p>ثبّت Node.js 20+ ثم راسلنا على support@example.com أو +966 50 123 4567.</p>
+    </div>
+    <div class="card good"><span class="tag">بعد</span>
+      <p>ثبّت <bdi>Node.js 20+</bdi> ثم راسلنا على <bdi>support@example.com</bdi> أو <bdi dir="ltr">+966 50 123 4567</bdi>.</p>
+    </div>
+  </div>
+
+  <h2>٤. الأكواد داخل صفحة عربية</h2>
+  <div class="pair">
+    <div class="card bad"><span class="tag">قبل</span>
+      <div style="background:var(--bg);padding:10px 12px;border-radius:8px;font-family:ui-monospace,monospace;white-space:pre">const x = (a, b) => a + b; // sum</div>
+    </div>
+    <div class="card good"><span class="tag">بعد</span>
+      <pre dir="ltr">const x = (a, b) => a + b; // sum</pre>
+    </div>
+  </div>
+</main>
+</body>
+</html>

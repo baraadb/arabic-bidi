@@ -1,0 +1,22 @@
+{
+  "name": "arabic-bidi",
+  "version": "1.1.0",
+  "description": "Correct ordering and fonts for mixed Arabic/RTL + English text in Claude replies, artifacts, HTML, charts and documents.",
+  "license": "MIT",
+  "keywords": [
+    "arabic",
+    "rtl",
+    "bidi",
+    "unicode",
+    "typography",
+    "persian",
+    "urdu",
+    "hebrew"
+  ],
+  "author": {
+    "name": "Baraa Adel",
+    "url": "https://github.com/baraadb"
+  },
+  "homepage": "https://github.com/baraadb/arabic-bidi",
+  "repository": "https://github.com/baraadb/arabic-bidi"
+}
