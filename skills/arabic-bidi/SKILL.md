@@ -105,7 +105,7 @@ Latin punctuation inside English runs, code and URLs.
 
 **Persian, Urdu and Hebrew** follow all of the rules above. Each has extra details
 (Persian zero-width non-joiner, Urdu Nastaliq line height, which digits to use); read
-`references/persian-urdu-hebrew.md` when writing in one of them.
+`references/other-rtl-languages.md` when writing in one of them.
 
 **Replying in English with occasional Arabic** is the mirror case: lines start with English,
 and the Arabic run should be compact. Usually nothing is needed.

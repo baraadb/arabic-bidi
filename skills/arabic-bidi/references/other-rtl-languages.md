@@ -1,4 +1,4 @@
-# Persian, Urdu and Hebrew
+# Other right-to-left languages: Persian, Urdu, Hebrew
 
 Everything in SKILL.md applies (first word sets direction, isolate English runs, watch symbols).
 These are the language-specific additions.

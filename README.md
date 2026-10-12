@@ -10,7 +10,7 @@
 [![License: MIT](https://img.shields.io/badge/license-MIT-0E7C66?style=flat-square)](LICENSE)
 [![Claude Skill](https://img.shields.io/badge/Claude-skill-1A1712?style=flat-square)](#التثبيت)
 [![Claude Code Plugin](https://img.shields.io/badge/Claude_Code-plugin-1A1712?style=flat-square)](#في-claude-code)
-[![RTL](https://img.shields.io/badge/RTL-Arabic%20·%20Persian%20·%20Urdu%20·%20Hebrew-C2410C?style=flat-square)](#اللغات)
+[![RTL](https://img.shields.io/badge/RTL-Arabic%20·%20Persian%20·%20Urdu-C2410C?style=flat-square)](#اللغات)
 
 **[التثبيت](#التثبيت)** · **[قبل وبعد](#قبل-وبعد)** · **[الأسئلة الشائعة](#الأسئلة-الشائعة)** · **[English](#english)**
 
@@ -128,7 +128,6 @@ cp -r skills/arabic-bidi ~/.claude/skills/
 
 - **الفارسية:** الفاصل الخفي بين أجزاء الكلمة، والحروف الفارسية بدل العربية المشابهة، والأرقام.
 - **الأردية:** خط النستعليق وارتفاع السطر المناسب له.
-- **العبرية:** نفس قواعد الاتجاه، مع الخطوط والعلامات الخاصة فيها.
 
 ## أداة الفحص
 
@@ -148,7 +147,7 @@ skills/arabic-bidi/
 ├── references/
 │   ├── artifacts.md                 الصفحات والرسوم البيانية
 │   ├── other-formats.md             ملفات المكتب والصور والفيديو والإيميل
-│   └── persian-urdu-hebrew.md       الفارسية والأردية والعبرية
+│   └── other-rtl-languages.md       الفارسية والأردية
 └── scripts/check_bidi.py            أداة الفحص
 hooks/                               الفحص التلقائي
 examples/demo.html                   صفحة قبل وبعد
@@ -181,7 +180,7 @@ preferences-snippet.md               النسخة المختصرة للتفضي�
 - **Chat replies:** every Arabic line starts with an Arabic word; symbols that flip (`C++`, `C#`, `.NET`, `10-20`, `+966 50…`, `-15%`, `$49`) are rephrased or wrapped in an invisible LRM mark. Every rule was verified in Chromium with `dir="auto"`, the way chat apps render.
 - **Artifacts:** `dir="rtl"`, `<bdi>` isolation, `dir="auto"` for dynamic text, logical CSS, one font for both scripts, canvas and chart RTL options.
 - **Other formats:** Word, PowerPoint, Excel, PDF, Pillow images, ffmpeg/ASS captions, HTML email, Mermaid.
-- **Languages:** Arabic, Persian (ZWNJ, Persian letters and digits), Urdu (Nastaliq), Hebrew.
+- **Languages:** Arabic, Persian (ZWNJ, Persian letters and digits), Urdu (Nastaliq).
 - **Automatic check in Claude Code:** a hook runs the checker on every file Claude writes and sends problems back so Claude fixes them.
 
 **Install**
